@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+
+
+
+/* ----------------------logo of sidebar--------------------------------------- */
+
+.logoCon {
+    /* margin-left: 32px;
+    margin-right: 32px; */
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logoTitle {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #A4A6B3;
+    opacity: 0.7;
+    margin-left: 12; /* <--- necessary to separate title and logo */
+}
+
+.logoCon:hover {
+    background-color: rgba(221,226,255, 0.08);
+}
+
+.Logo {
+    height: 30px;
+    width: 30px;
+    background-size: auto;
+    border-radius: 50%;
+    border: 1px solid #c8c9ce;
+    background-color: #c8c9ce;
+    outline: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+
+/* ------------------------sidebar------------------------------------- */
+
+
+.menuItemList {
+    margin-top: 52px;
+}
+
+.sidebar_container {
+    background-color: #363740;
+    padding-top: 32px;
+    height: calc(100%);
+}
+
+.sidebar_containerMobile {
+    transition: left 0.5s, right 0.5s;
+    position: absolute;
+    width: 255px;
+    height: calc(100% - 32px);
+    z-index: 901px;
+}
+
+.sidebar_mainContainer {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.sidebar_mainContainerMobile {
+    position: absolute;
+    width: 100vw;
+    min-width: 100%;
+    top: 0px;
+    left: 0px,
+}
+
+.sidebar_outsideLayer {
+    position: absolute;
+    width: 100vw;
+    min-width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.50);
+    z-index: 900;
+}
+
+.hide {
+    left: -255px;
+}
+.show {
+    left: 0px;
+}
+
+.sidebar_seperator {
+    border-top: 1px solid #DFE0EB;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    opacity: 0.06;
+}
+
+.burgerIcon {
+    cursor: pointer;
+    position: absolute;
+    left: 24px;
+    top: 34px;
+}
+
+
+
+/* ---------------------menu items---------------------------------------- */
+.activeBar {
+    height: 56px;
+    width: 3px;
+    background-color: #DDE2FF;
+    position: absolute;
+    left: 0;
+}
+
+.activeContainer {
+    background-color: rgba(221,226,255, 0.08);
+}
+
+.activeTitle {
+    color: #DDE2FF;
+}
+
+.itemContainer {
+    height: 56px;
+    cursor: pointer;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-family: Muli;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #A4A6B3;
+    display: flex;
+    align-items: center;
+}
+
+.itemContainer:hover {
+    background-color: rgba(221,226,255, 0.08);
+}
+
+
+
+
+.itemTitle {
+    font-family: Muli;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #A4A6B3;
+    margin-left: 24px;
+    justify-content: center;
+
+}
+
+
+/* ----------------------main page css--------------------------------------- */
+
+.mainContainer {
+    height: 100vh;
+    height: 100%;
+}
+
+.mainContent {
+    margin-top: 54px;
+}
+.mainBlock {
+    background-color: #F7F8FC;
+    padding: 30px;
+}
+
+/* ----------------------nav bar css--------------------------------------- */
+
+.navAvatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    margin-left: 14px;
+    border: 1px solid #DFE0EB;
+}
+
+.navContainer {
+    height: 40px;
+}
+
+.navCursorPointer {
+    cursor: pointer;
+}
+
+.navName {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.2;
+
+}
+
+@media (max-width: 768px) {
+
+    .navName {
+        display: 'none';
+    }
+}
+
+.navSeparator {
+    border-left: 1px solid #DFE0EB;
+    margin-left: 32px;
+    margin-right: 32px;
+    height: 32px;
+    width: 2px;
+}
+
+@media (max-width: 768px) {
+    
+    .navSeparator {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+
+.navTitle {
+    font-family: Muli;
+    font-size: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.3;
+}
+
+@media (max-width: 768px){
+    .navTitle {
+        margin-left: 36px;
+    }
+}
+@media (max-width: 468px){
+    .navTitle {
+        font-size: 20px;
+    }
+}
+
+.navIconStyles {
+    cursor: pointer;
+    margin-left: 25px;
+    /* border: 1px solid #c8c9ce; */
+    border-radius: 30px;
+}
+
+.navIconStyles:hover {
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2)
+}
+
+@media (max-width: 768px) {
+    .navIconStyles {
+        margin-left: 12px;
+    }
+}
+
+.bellIcon {
+    margin-left: 25px;
+}
+
+.navSearchInput {
+    outline: none;
+    border: 1px solid #c8c9ce;
+    font-size: 18px;
+    padding: 5px;
+    font-weight: 300;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* min-width: 300px;
+    max-width: 500px; */
+    width: calc(100%);
+    max-width: 600px;
+
+}
+
+.navBox {
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ----------------------login page css--------------------------------------- */
+
+
+
+
+.loginContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #3e3e42; */
+    margin-top: 150px;
+    /* background-color: #DFE0EB; */
+    z-index: 999;
+}
+
+.background {
+    background-image: url(../images/music_icon.gif);
+    background-repeat: repeat;
+    /* background-attachment: fixed; */
+    background-position:left;
+    height: 100vh;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .background {
+        background-image: none;
+    }
+}
+
+.logoPos {
+    /* position: absolute; 
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    /* width: 40%; */
+    /* width: 200px; 
+    height: 200px;  */
+    /* background-color: #fafafa; 
+    border: solid 3px #78e382;  */
+    /* z-index: 0; */
+
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+
+
+.loginBoxController {
+    visibility: visible;
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    max-width: 24em;
+    min-width: 21em;
+    height: 35px;
+    /* -webkit-box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2); */
+    margin-bottom: 30px;
+    align-items: center;
+    transition: visibility 0.5s ease-out;
+    justify-content: center;
+    
+}
+
+.loginController {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    line-height: 2;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2); */
+}
+
+/* //Currently Selected Controller */
+.selected-controller {
+    transition: border 0.5s ease-out;
+    border-bottom: 2px solid 
+    /* $blue_theme; */
+}
+
+.loginBoxContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 24em;
+    min-width: 21em;
+    /* box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2); */
+    border-radius: 6px;
+    padding: 24px;
+}
+
+.loginInnerContainer {
+    transition: visibility 0.2s ease-out;
+}
+
+.loginInnerContainer.show {
+    visibility: visible;
+}
+
+/* //Header */
+.header {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 17px;
+    /* margin-left: 35px; */
+    /* margin-right: 35px; */
+    font-family: Ozxgen, sans-serif;
+    font-size: 22px;
+    border-bottom: 2px solid 
+    /* $blue_theme; */
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginInputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* //Label */
+.login-label {
+    font-family: Oxygen, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+/* 
+//Input */
+.loginInput {
+    height: 2.1em;
+    border-radius: 3px;
+    border: 1px solid;
+    /* $blue_theme; */
+    transition: border 0.4s ease-out;
+    padding: 13px;
+    font-family: Oxygen, sans-serif;
+    font-size: 19px;
+    color: #3e3e42;
+    background: rgba(15, 15, 15, 0.01);
+}
+
+.loginInput:hover {
+    border: 2px solid 
+    /* $blue_theme; */
+}
+
+.loginInput:focus {
+    border: 2px solid #6565e7;
+    /* loginBox-shadow: 0px 0px 20px rgba(15, 15, 15, 0.2); */
+}
+
+/* //Input Placeholder */
+.loginInput::placeholder {
+    font-family: Oxygen, sans-serif;
+    font-size: 16px; 
+    /* //color: rgba(46, 213, 116, 0.839); */
+    color: rgba(15, 15, 15, 0.4);
+}
+
+.loginButton {
+    padding: 2px 30px;
+    /* background-color: #417cef; */
+    border: 0;
+    font-size: 18px;
+    border-radius: 3px;
+    font-family: Oxygen, sans-serif;
+    background-color: rgba(15, 15, 15, 0.03);
+    margin-top: 20px;
+    border: 2px solid #417cef;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+}
+
+.loginButton:hover,
+.loginButton:focus,
+.loginController:hover,
+.loginController:focus {
+    background-color: #417cef;
+    color: white;
+}
+
+.danger-error {
+    color: #e74c3c;
+    font-size: 16px;
+}
+
+/* //Password */
+.password-state {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.pwd {
+    height: 6px;
+    flex: 1;
+    visibility: hidden;
+}
+
+.pwd-weak {
+    background-color: #e74c3c;
+}
+
+.pwd-medium {
+    background-color: #3498db;
+}
+
+.pwd-strong {
+    background-color: #2ecc71;
+}
+
+.show {
+    visibility: visible;
+}
+
+
+
+/* ----------------------component songcard css--------------------------------------- */
+
+
+.songCardTitle {
+    color: #9FA2B4;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    margin-bottom: 12px;
+    min-width: 102px;
+    text-align: center;
+}
+
+.songCardValue {
+    color: #252733;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* ----------------------top box component--------------------------------------- */
+
+
+
+.topboxTitle {
+    color: #9FA2B4;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    margin-bottom: 12px;
+    min-width: 102px;
+    text-align: center;
+    /* margin-top: 15px; */
+}
+
+.topboxValue {
+    color: #252733;
+    font-family: Muli;
+    font-size: normal;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+
+/* ----------------------maincontent css--------------------------------------- */
+
+.contentContainer {
+    background-color: #FFFFFF;
+    border: 1px solid #DFE0EB;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+/* GraphContainer */
+
+.contentboxContainer {
+    margin-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+/* GraphSection */
+.contentBoxSection {
+    padding: 24px;
+}
+
+.contentBoxSubtitle {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #9FA2B4;
+    margin-top: 4px;
+    margin-right: 8px;
+}
+
+.contentBoxTitle {
+    font-family: Muli;
+    font-size: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #252733;
+}
+
+/* legend title */
+.contentSideTitle {
+    font-family: Muli;
+    font-size: normal;
+    font-weight: 600px;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.1px;
+    color: #9FA2B4;
+    margin-left: 8px;
+}
+
+.contentSeparator {
+    background-color: #DFE0EB;
+    width: 1px;
+    min-width: 1x;
+}
+
+.contentStatContainer {
+    border-bottom: 1px solid #DFE0EB;
+    padding: 24px 32px 24px 32px;
+    height: calc(114px - 48px);
+}
+
+.contentStatContainer:last-child {
+    border: 'none';
+}
+
+.contentStats {
+    border-top: 1px solid #DFE0EB;
+    width: 100%;
+}
+
+.sideStatTitle {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #9FA2B4;
+    white-space: nowrap;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    /* width: 100px; */
+}
+
+.sidestatValue {
+    font-family: Muli;
+    font-size: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #252733;
+}
+
+
+/* ----------------------ContentComponent css--------------------------------------- */
+
+
+.contentTopBoxContainer {
+    margin-right: -30px;
+    margin-top: -30px;
+}
+
+.contentSingleBox {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .contentSingleBox {
+        margin-top: 0px;
+    }
+}
+
+.contentSingleBoxContainer {
+    flex-grow: 1;
+    margin-right: 30px;
+    padding: 100px;
+
+}
+
+@media (max-width: 768px) {
+    .contentSingleBoxContainer {
+    margin-top: 30px;
+    max-width: none;
+    }
+}
+
+.contentMainContent {
+    margin-top: 30px;
+}
+
+/* ----------------------grid css--------------------------------------- */
+
+.gridContent {
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+
+.grid {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gridBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* align-items: center; */
+    padding: 5%;
+    margin: 5%;
+    background-color: #FFFFFF;
+    border: 1px solid #DFE0EB;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.addButton{
+    border: 1px solid #DFE0EB;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #363740;
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+}
+
+.addButton:hover {
+    background-color: rgba(221, 226, 255, 0.83);
+}
+
+
+/* ----------------------Guest css--------------------------------------- */
+
+.guestItemContainer {
+    height: 56px;
+    cursor: pointer;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-family: Muli;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #A4A6B3;
+    display: flex;
+    align-items: center;
+    text-decoration: line-through;
+}
+
+.guestItemContainer:hover {
+    background-color: rgba(221,226,255, 0.08);
+}
+
+
+
+/* ----------------------profile css--------------------------------------- */
+
+
+.profileBox {
+    display: flex;
+    flex-direction: column;
+
+    /* align-items: center; */
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.profileContainer {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ----------------------search css--------------------------------------- */
+
+
+.multiTitle {
+    font-family: Muli;
+    font-size: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 30px;
+    letter-spacing: 0.3;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.alignCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2.5%;
+    /* width: 200px;
+    height: 50px; */
+}
+
+.margin_bottom {
+    margin-bottom: 2%;
+}
+
+.horizontal {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.searchButtonWidth {
+    width: 500px;
+}
+
+.searchButton {
+    border: 1px solid #DFE0EB;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #363740;
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    width: 200px;
+    
+}
+
+.searchButton:hover {
+    background-color: rgba(221, 226, 255, 0.83);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ----------------------content css--------------------------------------- */
+

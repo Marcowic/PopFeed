@@ -64,7 +64,7 @@ router.route('').get( (req, res) => {
                 };
 
             }
-
+            console.log(recommendations);
             res.json(recommendations);
         }
     })

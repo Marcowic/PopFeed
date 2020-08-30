@@ -11,6 +11,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 const uri = process.env.ATLAS_URI;
 
+
+
 app.use(cors());
 app.use(express.json());
 
@@ -53,10 +55,18 @@ app.get('', (req, res) =>{
     res.send("hello")
 });
 
+const popfeed = functions
+    .runWith({memory: "2GB", timeoutSeconds: 120})
+    .https
+    .onRequest(app);
 
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is running on port: ${port}`);
+// });
 
 // Firebase App deploy
 // exports.popfeed = functions.https.onRequest(app);
+
+module.exports = {
+    popfeed
+};

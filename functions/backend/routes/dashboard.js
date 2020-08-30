@@ -192,7 +192,10 @@ router.route('').get( async (req,res) => {
             res.json(favouritesData);
         }
     })
-    .catch(err => res.status(400).json('Error: ' + err));
+    .catch(err => {
+        console.log(err);
+        res.status(400).json('Error: ' + err);
+    });
     
     
 });

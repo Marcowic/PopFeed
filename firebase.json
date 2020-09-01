@@ -9,6 +9,7 @@
     "rewrites": [
       {
         "source": "**",
+        "function": "popfeed",
         "destination": "/index.html"
       }
     ]

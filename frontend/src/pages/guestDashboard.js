@@ -88,7 +88,7 @@ class dashboard extends Component {
         window.addEventListener('resize', this.resize);
         const jwt = "5e5fb9ede3431900026874bb"
         // await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/users/' + jwt) // this gives a promise back
-         await axios.get('http://localhost:5000/dashboard?id=' + jwt) // this gives a promise back
+         await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/dashboard?id=' + jwt) // this gives a promise back
         .then(res => {
             console.log(res.data)
             this.setState({artist_list: res.data})

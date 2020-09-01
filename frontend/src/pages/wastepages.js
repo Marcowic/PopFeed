@@ -1070,4 +1070,3 @@ console.log((this.props.location.search).replace("%20", " "))
 if(this.props.location.search !== ("?q="+ (query.q).replace(" ", "%20"))) {
     window.location.reload();
 }
-}

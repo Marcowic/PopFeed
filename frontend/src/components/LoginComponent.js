@@ -32,7 +32,7 @@ class LoginForm extends Component {
 
     submit(e) {
         e.preventDefault();
-        const url = 'https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/users/login';
+        const url = 'https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/login';
         axios.post(url, {
             password: this.state.password,
             email: this.state.email

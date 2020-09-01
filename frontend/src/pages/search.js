@@ -37,7 +37,7 @@ class Search extends Component {
         const jwt = get_JWT();
         try {
             // const res = await axios.post('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/users/addToFollowingList', {artist: this.state.artist.artist_name, id: jwt}) // this gives a promise back
-            const res = await axios.post('http://localhost:5000/users/addToFollowingList', {artist: this.state.artist.artist_name, id: jwt}) // this gives a promise back
+            const res = await axios.post('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/addToFollowingList', {artist: this.state.artist.artist_name, id: jwt}) // this gives a promise back
             console.log(res.data)
             console.log(this.state.artist.artist_name, )
             if(res.data.result === null) {
@@ -56,7 +56,7 @@ class Search extends Component {
         // const query = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
         const jwt = get_JWT();
         try {
-            const res = await axios.post('http://localhost:5000/users/addToFavouritesList', {
+            const res = await axios.post('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/addToFavouritesList', {
                 // artist: query.q.toLowerCase(),
                 entry: {head: this.state.artist.artist_name, sub: this.state.artist.most_relevant_album, date: this.state.artist.createdAt, fav_id: "a"},
                 id: jwt
@@ -77,7 +77,7 @@ class Search extends Component {
             try {
                 this.setState({loading: true});
                 // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
-                const res = await axios.get('http://localhost:5000/artist/search?q='+ query.q) // this gives a promise back
+                const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
                 this.setState({artist: res.data, loading: false})
                 console.log(res.data)
     
@@ -103,7 +103,7 @@ class Search extends Component {
         try {
             this.setState({loading: true});
             // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
-            const res = await axios.get('http://localhost:5000/artist/search?q='+ query.q) // this gives a promise back
+            const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
             this.setState({artist: res.data, loading: false})
             console.log(res.data)
 

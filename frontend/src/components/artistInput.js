@@ -14,7 +14,7 @@ const Userinput = (props) => {
             const jwt = get_JWT();
             // delete
             // const res = await axios.post('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist/search?q=', {artist: props.artist}) // this gives a promise back
-            const res = await axios.post('http://localhost:5000/users/removeFromFollowingList', {id: jwt, artist: props.artist}) // this gives a promise back
+            const res = await axios.post('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/removeFromFollowingList', {id: jwt, artist: props.artist}) // this gives a promise back
             console.log(res.data)
             props.onDelete();
             toast(props.artist + " has been deleted", {

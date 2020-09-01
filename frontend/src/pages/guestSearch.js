@@ -80,7 +80,7 @@ class Search extends Component {
             try {
                 this.setState({loading: true});
                 // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
-                const res = await axios.get('http://localhost:5000/artist/search?q='+ query.q) // this gives a promise back
+                const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
                 this.setState({artist: res.data, loading: false})
                 console.log(res.data)
     
@@ -107,7 +107,7 @@ class Search extends Component {
         try {
             this.setState({loading: true});
             // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
-            const res = await axios.get('http://localhost:5000/artist/search?q='+ query.q) // this gives a promise back
+            const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/artist/search?q='+ query.q) // this gives a promise back
             this.setState({artist: res.data, loading: false})
             console.log(res.data)
 

@@ -37,7 +37,7 @@ class dashboard extends Component {
         try {
             this.setState({loading: true});
             // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/dashboard?id=' + jwt) // this gives a promise back
-            const res = await axios.get('http://localhost:5000/dashboard?id=' + jwt) // this gives a promise back
+            const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/dashboard?id=' + jwt) // this gives a promise back
             console.log(res.data)
             console.log("work")
             this.setState({artist_list: res.data})

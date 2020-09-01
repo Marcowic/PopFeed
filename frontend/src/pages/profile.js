@@ -40,7 +40,7 @@ class Login extends Component {
     window.addEventListener('resize', this.resize);
     try {
         // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist?id=' + jwt) // this gives a promise back
-        const res = await axios.get('http://localhost:5000/users?id=' + jwt) // this gives a promise back
+        const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users?id=' + jwt) // this gives a promise back
         console.log(res.data)
         this.setState({userData: res.data})
     }  catch (e) {
@@ -53,7 +53,7 @@ class Login extends Component {
     window.addEventListener('resize', this.resize);
     try {
         // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist?id=' + jwt) // this gives a promise back
-        const res = await axios.get('http://localhost:5000/users?id=' + jwt) // this gives a promise back
+        const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users?id=' + jwt) // this gives a promise back
         console.log(res.data)
         this.setState({userData: res.data})
     }  catch (e) {
@@ -90,7 +90,7 @@ class Login extends Component {
 
 
     if (this.state.password === this.state.cpassword) {
-      const url = 'http://localhost:5000/users/profileUpdate';
+      const url = 'https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/profileUpdate';
       axios.post(url, {
           id: jwt,
           firstname: fn,

@@ -14,7 +14,7 @@ const Userinput = (props) => {
             const jwt = get_JWT();
             // delete
             // const res = await axios.post('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist/search?q=', {artist: props.artist}) // this gives a promise back
-            const res = await axios.post('http://localhost:5000/users/removeFromFavouritesList', {
+            const res = await axios.post('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/removeFromFavouritesList', {
                 id: jwt,
                 entry: props.head
             }) // this gives a promise back

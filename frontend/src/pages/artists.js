@@ -34,7 +34,7 @@ class Artists extends Component {
         const jwt = get_JWT();
         try {
             // const res = await axios.post('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/users/addToFollowingList', {artist: query.q.toLowerCase(), id: jwt}) // this gives a promise back
-            const res = await axios.post('http://localhost:5000/users/addToFollowingList', {artist: query.q.toLowerCase(), id: jwt}) // this gives a promise back
+            const res = await axios.post('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/addToFollowingList', {artist: query.q.toLowerCase(), id: jwt}) // this gives a promise back
             console.log(res.data)
             if(res.data.result === null) {
                 this.setState({page: true})
@@ -51,7 +51,7 @@ class Artists extends Component {
         // const query = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
         try {
             // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist?id=' + jwt) // this gives a promise back
-            const res = await axios.get('http://localhost:5000/artist?id=' + jwt) // this gives a promise back
+            const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/artist?id=' + jwt) // this gives a promise back
             console.log(res.data)
             this.setState({artist_list: res.data, loading: false})
         }  catch (e) {
@@ -64,7 +64,7 @@ class Artists extends Component {
         try {
             // get artist back
             // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/users/') // this gives a promise back
-            const res = await axios.get('http://localhost:5000/artist?id=' + jwt) // this gives a promise back
+            const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/artist?id=' + jwt) // this gives a promise back
         
             console.log(res.data)
             this.setState({artist_list: res.data})

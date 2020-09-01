@@ -13,7 +13,7 @@ const Userinput = (props) => {
 
         const jwt = get_JWT();
         try {
-            const res = await axios.post('http://localhost:5000/users/addToFavouritesList', {
+            const res = await axios.post('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/users/addToFavouritesList', {
                 // artist: query.q.toLowerCase(),
                 entry: {head: props.song, sub: props.artist, album: props.album, track: props.track, link: props.link, fav_id: "s"},
                 id: jwt

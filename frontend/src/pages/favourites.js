@@ -30,7 +30,7 @@ class Favourites extends Component {
         window.addEventListener('resize', this.resize);
         try {
             // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/artist?id=' + jwt) // this gives a promise back
-            const res = await axios.get('http://localhost:5000/favourites?id=' + jwt) // this gives a promise back
+            const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/favourites?id=' + jwt) // this gives a promise back
             console.log(res.data)
             this.setState({fav_list: res.data})
         }  catch (e) {
@@ -44,7 +44,7 @@ class Favourites extends Component {
             // get artist back
             this.setState({loading: true});
             // const res = await axios.get('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/users/') // this gives a promise back
-            const res = await axios.get('http://localhost:5000/favourites?id=' + jwt) // this gives a promise back
+            const res = await axios.get('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/favourites?id=' + jwt) // this gives a promise back
             console.log(res.data)
             this.setState({fav_list: res.data})
         }  catch (e) {

@@ -17,7 +17,7 @@ class AuthenticateComponent extends Component {
             this.props.history.push('/Login')
         }
 
-        axios.post('https://us-central1-popfeed-268519.cloudfunctions.net/popfeed/users/verify', {id: jwt})
+        axios.post('https://us-central1-popfeed-web-app.cloudfunctions.net/popfeed/popfeed-web-app/us-central1/popfeed/users/verify', {id: jwt})
         .then (res => this.setState({user: res.data}))
         .catch(err => {
             console.log(jwt);

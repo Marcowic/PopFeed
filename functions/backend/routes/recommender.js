@@ -14,7 +14,7 @@ router.route('').get( (req, res) => {
     .then(async user => {
         if(user == null){
 
-            res.status(400).json('Not a valid user.')
+            res.status(400).json('Not a valid user.');
 
         } else {
             var recommendations = [];
@@ -63,13 +63,13 @@ router.route('').get( (req, res) => {
                     counter += 1;
                 };
 
-            }
-            console.log(recommendations);
+            };
+
             res.json(recommendations);
         }
     })
     .catch(err => res.status(400).json('Error: ' + err));
-})
+});
 
 
 

@@ -42,6 +42,7 @@ router.route('/login').post(async (req, res) => {
 });
 
 router.route('/verify').post( async (req, res) => {
+    console.log(req);
      User.findById(req.body.id)
     .then(user => {
 
